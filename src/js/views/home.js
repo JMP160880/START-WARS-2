@@ -24,17 +24,14 @@ useEffect(() =>{
 console.log(personajes);
 
 return(
-	<div className="text-center mt-5">
-	<h1>Hello Rigo!</h1>
-	<p>
-		<img src={rigoImage} />
-	</p>
-	<a href="#" className="btn btn-success">
-		If you see this green button, bootstrap is working
-	</a>
+	//<div className="text-center d-flex mt-5">
 	
+	<div className="row text-center">
+    <div className="col-lg-4 col-md-4" >
 	{personajes.map((item)=><Card key={item.uid} nombre={item.name}/>)}
-</div>
+    </div>
+  </div>
+//</div>
 )
 }
-//<li key={item.uid}>{item.name}</li>)
+

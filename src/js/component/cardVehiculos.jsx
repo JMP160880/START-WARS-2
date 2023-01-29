@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Card = (props) =>{
+const CardVehiculos   = (props) =>{
     return(
     
         <div className="card d-flex content-justify">
             <img src="..." className="card-img-top" alt="..."/>
             <div className="card-body">
-                <h5 className="card-title text-start fw-bold">{props.nombre}</h5>
+                <h5 className="card-title text-start fw-bold">{props.nombreVehiculo}</h5>
                 <p className="card-text text-start"></p>
                 <div className="d-flex justify-content-between">
                     <Link to={"/single/"+ props.id} className="card-link">
@@ -26,4 +26,4 @@ const Card = (props) =>{
     );
 };
 
-export default Card;
+export default CardVehiculos;

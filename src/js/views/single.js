@@ -1,43 +1,39 @@
 import React, { useState, useEffect, useContext } from "react";
+import CardPersonaje from "../component/cardPersonaje.jsx";
 import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
+import Card from "../component/card.jsx";
 
 export const Single = props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
-	const [personajesIndividuales,setPersonajesIndividuales] = useState([])
+	// console.log(params.theid);
+	console.log(params.theid);
+	const [informacionPersonaje,setInformacionPersonaje] = useState([])
 
 	const obtenerPersonajesIndividuales = () => {
-		fetch("https://www.swapi.tech/api/people/uid",{
-			method: "GET"
-		})
+		fetch("https://www.swapi.tech/api/people/" + params.theid)
 		.then(res => res.json())
-		.then(data => setPersonajesIndividuales(data.url))
+		.then(data => setInformacionPersonaje(data.result))
 		.catch(err => console.error(err))
 		}
 	
 	useEffect(() =>{
 		obtenerPersonajesIndividuales()
 	},[])
-	
-	console.log(personajesIndividuales);
 
 
 
 
 	return (
+		
+		
 		<div className="jumbotron">
-			<h1 className="display-4">This will show the demo element: {store.demo[params.theid].title}</h1>
-
-			<hr className="my-4" />
-
-			<Link to="/">
-				<span className="btn btn-primary btn-lg" href="#" role="button">
-					Back home
-				</span>
-			</Link>
+		<h1 className="display-4">{informacionPersonaje.properties?.name} </h1>
+		<hr className="my-4" />
 		</div>
+		
 	);
 };
 

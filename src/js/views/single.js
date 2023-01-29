@@ -6,6 +6,26 @@ import { Context } from "../store/appContext";
 export const Single = props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
+	const [personajesIndividuales,setPersonajesIndividuales] = useState([])
+
+	const obtenerPersonajesIndividuales = () => {
+		fetch("https://www.swapi.tech/api/people/uid",{
+			method: "GET"
+		})
+		.then(res => res.json())
+		.then(data => setPersonajesIndividuales(data.url))
+		.catch(err => console.error(err))
+		}
+	
+	useEffect(() =>{
+		obtenerPersonajesIndividuales()
+	},[])
+	
+	console.log(personajesIndividuales);
+
+
+
+
 	return (
 		<div className="jumbotron">
 			<h1 className="display-4">This will show the demo element: {store.demo[params.theid].title}</h1>

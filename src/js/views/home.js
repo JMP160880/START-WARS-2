@@ -1,12 +1,10 @@
 import React,{useState, useEffect} from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 import Card from "../component/card.jsx";
 
 export const Home = () => {
 
 const [personajes,setPersonajes] = useState([])
-
 
 const obtenerPersonajes = () => {
 	fetch("https://www.swapi.tech/api/people/",{
@@ -28,7 +26,7 @@ return(
 	
 	<div className="row text-center">
     <div className="col-lg-4 col-md-4" >
-	{personajes.map((item)=><Card key={item.uid} nombre={item.name}/>)}
+	{personajes.map((item)=><Card key={item.uid} nombre={item.name} genero={item.gender} />)}
     </div>
   </div>
 //</div>

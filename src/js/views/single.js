@@ -35,35 +35,38 @@ export const Single = props => {
     <div className="col-md-7">
       <div className="card-body">
         <h1 className="card-title fw-bold text-decoration-underline lh-base">{informacionPersonaje.properties?.name}</h1>
-        <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
     </div>
   </div>
-    <div className="card-footer d-flex">
-		<div className="container">
-  			<div className="row gx-5">
-    			<div className="col-lg-2">
-     			<div className="border bg-light text-center">Custom column padding</div>
-   			</div>
-    		<div className="col-lg-2">
-      			<div className="border bg-warning text-center">Custom column padding</div>
-    		</div>
-			<div className="col-lg-2">
-      			<div className="border bg-warning text-center">Custom column padding</div>
-    		</div>
-			<div className="col-lg-2">
-      			<div className="border bg-warning text-center">Custom column padding</div>
-    		</div>
-			<div className="col-lg-2">
-      			<div className="border bg-warning text-center">Custom column padding</div>
-    		</div>
-			<div className="col-lg-2">
-      			<div className="border bg-warning text-center">Custom column padding</div>
-    		</div>
-  		</div>
-		</div>
+		<table class="table">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Primero</th>
+      <th scope="col">Último</th>
+      <th scope="col">Handle</th>
+	  <th scope="col">Handle</th>
+	  <th scope="col">Handle</th>
+	  <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"></th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+	  <td>@mdo</td>
+	  <td>@mdo</td>
+	  <td>@mdo</td>
+    </tr>
+  </tbody>
+</table>
+
 	</div>
-</div>
+		
+
 
 		
 	);

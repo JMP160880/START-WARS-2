@@ -40,26 +40,28 @@ export const Single = props => {
     </div>
   </div>
     <div className="card-footer d-flex">
-  		<div className="row">
-    		<div className="col">
-     	 		One of three columns
-   		 	</div>
-    		<div className="col-2">
-      			One of three columns
+		<div className="container">
+  			<div className="row gx-5">
+    			<div className="col-lg-2">
+     			<div className="border bg-light text-center">Custom column padding</div>
+   			</div>
+    		<div className="col-lg-2">
+      			<div className="border bg-warning text-center">Custom column padding</div>
     		</div>
-    		<div className="col-2">
-      			One of three columns
+			<div className="col-lg-2">
+      			<div className="border bg-warning text-center">Custom column padding</div>
     		</div>
-			<div className="col-2">
-      			One of three columns
+			<div className="col-lg-2">
+      			<div className="border bg-warning text-center">Custom column padding</div>
     		</div>
-			<div className="col-2">
-      			One of three columns
+			<div className="col-lg-2">
+      			<div className="border bg-warning text-center">Custom column padding</div>
     		</div>
-			<div className="col-2">
-      			One of three columns
+			<div className="col-lg-2">
+      			<div className="border bg-warning text-center">Custom column padding</div>
     		</div>
-  </div>
+  		</div>
+		</div>
 	</div>
 </div>
 

@@ -27,12 +27,42 @@ export const Single = props => {
 
 
 	return (
-		
-		
-		<div className="jumbotron">
-		<h1 className="display-4">{informacionPersonaje.properties?.name} </h1>
-		<hr className="my-4" />
-		</div>
+		<div className="card mb-3 w-200">
+  <div className="row g-0">
+    <div className="col-md-4">
+      <img src="..." className="img-fluid rounded-start" alt="..."/>
+    </div>
+    <div className="col-md-7">
+      <div className="card-body">
+        <h1 className="card-title fw-bold text-decoration-underline lh-base">{informacionPersonaje.properties?.name}</h1>
+        <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+    <div className="card-footer d-flex">
+  		<div className="row">
+    		<div className="col">
+     	 		One of three columns
+   		 	</div>
+    		<div className="col-2">
+      			One of three columns
+    		</div>
+    		<div className="col-2">
+      			One of three columns
+    		</div>
+			<div className="col-2">
+      			One of three columns
+    		</div>
+			<div className="col-2">
+      			One of three columns
+    		</div>
+			<div className="col-2">
+      			One of three columns
+    		</div>
+  </div>
+	</div>
+</div>
+
 		
 	);
 };

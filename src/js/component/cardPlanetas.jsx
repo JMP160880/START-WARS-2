@@ -10,7 +10,7 @@ const CardPlanetas   = (props) =>{
                 <h5 className="card-title text-start fw-bold">{props.nombrePlaneta}</h5>
                 <p className="card-text text-start"></p>
                 <div className="d-flex justify-content-between">
-                    <Link to={"/single/"+ props.id} className="card-link">
+                    <Link to={"/planeta/"+ props.id} className="card-link">
                         <button type="button" className="btn btn-outline-primary">Learn more!</button>
                     </Link>
                     <Link to="#" className="card-link">

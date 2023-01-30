@@ -3,22 +3,25 @@ import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-export const Single = props => {
+export const Planeta = props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
 	
-	const [informacionPersonaje,setInformacionPersonaje] = useState([])
+	const [informacionPlaneta,setInformacionPlaneta] = useState([])
 
-	const obtenerPersonajesIndividuales = () => {
-		fetch("https://www.swapi.tech/api/people/" + params.theid)
+	const obtenerPlaneta = () => {
+		fetch("https://www.swapi.tech/api/planets/" + params.theid)
 		.then(res => res.json())
-		.then(data => setInformacionPersonaje(data.result))
+		.then(data => setInformacionPlaneta(data.result))
 		.catch(err => console.error(err))
 		}
 	
 	useEffect(() =>{
-		obtenerPersonajesIndividuales()
+		obtenerPlaneta()
 	},[])
+
+
+
 
 	return (
 		<div className="card mb-3 w-200">
@@ -28,7 +31,7 @@ export const Single = props => {
     </div>
     <div className="col-md-7">
       <div className="card-body">
-        <h1 className="card-title fw-bold text-decoration-underline lh-base">{informacionPersonaje.properties?.name}</h1>
+        <h1 className="card-title fw-bold text-decoration-underline lh-base">{informacionPlaneta.properties?.name}</h1>
         <p className="card-text text-justify">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
     </div>
@@ -48,12 +51,12 @@ export const Single = props => {
       <tbody className="table-warning text-danger">
         <tr>
           <th scope="row"></th>
-          <td>{informacionPersonaje.properties?.name}</td>
-          <td>{informacionPersonaje.properties?.birth_year}</td>
-          <td>{informacionPersonaje.properties?.hair_color}</td>
-	        <td>{informacionPersonaje.properties?.eye_color}</td>
-	        <td>{informacionPersonaje.properties?.height}</td>
-	        <td>{informacionPersonaje.properties?.mass}</td>
+          <td>{informacionPlaneta.properties?.name}</td>
+          <td>{informacionPlaneta.properties?.diameter}</td>
+          <td>{informacionPlaneta.properties?.gravity}</td>
+	        <td>{informacionPlaneta.properties?.rotation_period}</td>
+	        <td>{informacionPlaneta.properties?.surface_water}</td>
+	        <td>{informacionPlaneta.properties?.climate}</td>
         </tr>
       </tbody>
     </table>
@@ -61,6 +64,6 @@ export const Single = props => {
 	);
 };
 
-Single.propTypes = {
+Planeta.propTypes = {
 	match: PropTypes.object
 };

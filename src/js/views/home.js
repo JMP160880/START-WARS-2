@@ -51,8 +51,6 @@ useEffect(() =>{
 
 
 return(
-	//<div className="text-center d-flex mt-5">
-	
 	<div className="row text-center">
     <div className="col-lg-4 col-md-4" >
 		<h1 className="fw-bold text-decoration-underline">PERSONAJES</h1>

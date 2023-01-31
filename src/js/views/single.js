@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
-import { Context } from "../store/appContext";
+
 
 export const Single = props => {
-	const { store, actions } = useContext(Context);
+	
 	const params = useParams();
 	
 	const [informacionPersonaje,setInformacionPersonaje] = useState([])
@@ -21,10 +21,10 @@ export const Single = props => {
 	},[])
 
 	return (
-		<div className="card mb-3 w-200">
+		<div className="card mb-3 w-200 ">
   <div className="row g-0">
     <div className="col-md-4">
-      <img src="https://cdn.pixabay.com/photo/2016/10/09/00/18/star-wars-1724901_640.jpg" className="img-fluid rounded-start" alt="..."/>
+      <img src={"https://starwars-visualguide.com/assets/img/characters/" + params.theid+ ".jpg"} className="img-fluid rounded-start" alt="..."/>
     </div>
     <div className="col-md-7">
       <div className="card-body">

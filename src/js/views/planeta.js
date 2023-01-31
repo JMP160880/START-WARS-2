@@ -21,13 +21,13 @@ export const Planeta = props => {
 	},[])
 
 
-
+//https://starwars-visualguide.com/assets/img/categories/planets.jpg
 
 	return (
-		<div className="card mb-3 w-200">
+		<div className="card mb-3 w-200 border-warning border border-3">
   <div className="row g-0">
     <div className="col-md-4">
-      <img src="https://cdn.pixabay.com/photo/2016/02/25/00/55/star-wars-1221118_640.jpg" className="img-fluid rounded-start" alt="..."/>
+      <img src={"https://starwars-visualguide.com/assets/img/planets/" + params.theid+ ".jpg"} className="img-fluid rounded-start" alt="..."/>
     </div>
     <div className="col-md-7">
       <div className="card-body">

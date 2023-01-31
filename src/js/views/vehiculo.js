@@ -24,10 +24,10 @@ export const Vehiculo = props => {
 
 
 	return (
-		<div className="card mb-3 w-200">
+		<div className="card mb-3 w-200 border-warning border border-3">
   <div className="row g-0">
     <div className="col-md-4">
-      <img src="https://cdn.pixabay.com/photo/2017/10/11/14/57/spaceship-2841277_640.png" className="img-fluid rounded-start" alt="..."/>
+      <img src={"https://starwars-visualguide.com/assets/img/vehicles/"+ params.theid+ ".jpg"} className="img-fluid rounded-start" alt="..."/>
     </div>
     <div className="col-md-7">
       <div className="card-body">

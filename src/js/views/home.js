@@ -19,10 +19,6 @@ const obtenerPersonajes = () => {
 	.catch(err => console.error(err))
 	}
 
-useEffect(() =>{
-	obtenerPersonajes()
-},[])
-
 const obtenerPlanetas = () => {
 	fetch("https://www.swapi.tech/api/planets/",{
 		method: "GET"
@@ -32,9 +28,6 @@ const obtenerPlanetas = () => {
 	.catch(err => console.error(err))
 	}
 
-useEffect(() =>{
-	obtenerPlanetas()
-},[])
 const obtenerVehiculos = () => {
 	fetch("https://www.swapi.tech/api/vehicles",{
 		method: "GET"
@@ -46,6 +39,8 @@ const obtenerVehiculos = () => {
 
 useEffect(() =>{
 	obtenerVehiculos()
+	obtenerPlanetas()
+	obtenerPersonajes()
 },[])
 
 
@@ -65,7 +60,6 @@ return(
 	{planetas.map((item)=> <CardPlanetas key={item.uid} nombrePlaneta={item.name} idPlaneta={item.uid}/>)}
  	</div>
 	</div>
-	
 )
 }
 

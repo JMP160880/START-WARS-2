@@ -27,12 +27,12 @@ export const Planeta = props => {
 		<div className="card mb-3 w-200">
   <div className="row g-0">
     <div className="col-md-4">
-      <img src="..." className="img-fluid rounded-start" alt="..."/>
+      <img src="https://cdn.pixabay.com/photo/2016/02/25/00/55/star-wars-1221118_640.jpg" className="img-fluid rounded-start" alt="..."/>
     </div>
     <div className="col-md-7">
       <div className="card-body">
-        <h1 className="card-title fw-bold text-decoration-underline lh-base">{informacionPlaneta.properties?.name}</h1>
-        <p className="card-text text-justify">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h1 className="card-title fw-bold text-decoration-underline lh-base text-center">{informacionPlaneta.properties?.name}</h1>
+        <p className="card-text text-justify">This is a wider card with supporting text below as a natural lead-in to additional content.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
     </div>
   </div>
@@ -41,11 +41,11 @@ export const Planeta = props => {
         <tr>
           <th scope="col"></th>
           <th scope="col">Name</th>
-          <th scope="col">Birth Year</th>
-          <th scope="col">Hair Color</th>
-	        <th scope="col">Eye Color</th>
-	        <th scope="col">Height</th>
-	        <th scope="col">Mass</th>
+          <th scope="col">Diameter</th>
+          <th scope="col">Gravity</th>
+	        <th scope="col">Rotation Period</th>
+	        <th scope="col">Surface Water</th>
+	        <th scope="col">Climate</th>
         </tr>
       </thead>
       <tbody className="table-warning text-danger">

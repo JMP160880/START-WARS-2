@@ -5,7 +5,7 @@ const CardPlanetas   = (props) =>{
     return(
     
         <div className="card d-flex content-justify">
-            <img src="https://cdn.pixabay.com/photo/2016/02/25/00/55/star-wars-1221118_640.jpg" className="card-img-top" alt="..."/>
+            <img src="https://cdn.pixabay.com/photo/2016/02/25/00/55/star-wars-1221118_640.jpg" className="card-img-top"height="350px" alt="..."/>
             <div className="card-body">
                 <h5 className="card-title text-start fw-bold">{props.nombrePlaneta}</h5>
                 <p className="card-text text-start"></p>

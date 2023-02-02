@@ -9,16 +9,7 @@ export const Planeta = props => {
 	
 	const [informacionPlaneta,setInformacionPlaneta] = useState([])
 
-	const obtenerPlaneta = () => {
-		fetch("https://www.swapi.tech/api/planets/" + params.theid)
-		.then(res => res.json())
-		.then(data => setInformacionPlaneta(data.result))
-		.catch(err => console.error(err))
-		}
-	
-	useEffect(() =>{
-		obtenerPlaneta()
-	},[])
+
 
 
 //https://starwars-visualguide.com/assets/img/categories/planets.jpg

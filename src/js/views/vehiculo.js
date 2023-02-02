@@ -9,16 +9,9 @@ export const Vehiculo = props => {
 	
 	const [informacionVehiculo,setInformacionVehiculo] = useState([])
 
-	const obtenerVehiculo = () => {
-		fetch("https://www.swapi.tech/api/vehicles/" + params.theid)
-		.then(res => res.json())
-		.then(data => setInformacionVehiculo(data.result))
-		.catch(err => console.error(err))
-		}
 	
-	useEffect(() =>{
-		obtenerVehiculo()
-	},[])
+	
+	
 
 
 

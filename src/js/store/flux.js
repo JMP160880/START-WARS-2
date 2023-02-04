@@ -7,7 +7,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			informacionPersonaje: {},
 			informacionPlaneta: [],
 			informacionVehiculo: [],
-			
+			favorito: {},
+			listaFavoritos: [],
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -56,7 +57,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				.then(data => setStore({informacionVehiculo:data.result} ))
 				.catch(err => console.error(err))
 				},
-
+			addFav = () => {
+					setListaFavoritos(listaFavoritos.concat(favorito));
+				}
+//ME HE QUEDADO AQUÍ VIENDO COMO ESCRIBIRÍA ESTA FUNCIÓN
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();

@@ -1,9 +1,13 @@
-import React,{useState, useEffect, useContext} from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect, useContext } from "react";
+import PropTypes from "prop-types";
+import { Link, useParams } from "react-router-dom";
+import {Context} from "../store/appContext.js"
 
 
 const Card = (props) =>{
-//FALTA METER DATOS DE STORE Y ACTIONS
+    const{store,actions}= useContext(Context)
+	
+	const params = useParams();
     return(
     
         <div className="card d-flex content-justify m-2 border-warning border border-3">
@@ -16,7 +20,7 @@ const Card = (props) =>{
                         <button type="button" className="btn btn-outline-primary border-primary border border-2 fw-bold">Learn more!</button>
                     </Link>
                     <Link to="#" className="card-link">
-                        <button onClick={()=>{addFav()}} type="button" className="btn btn-outline-warning"><i className="fa fa-heart"></i></button>
+                        <button onClick={()=>{actions.addFav()}} type="button" className="btn btn-outline-warning"><i className="fa fa-heart"></i></button>
                     </Link>
                 </div>
                

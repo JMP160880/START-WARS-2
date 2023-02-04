@@ -7,7 +7,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			informacionPersonaje: {},
 			informacionPlaneta: [],
 			informacionVehiculo: [],
-			favorito: {},
+			favorito: (""),
 			listaFavoritos: [],
 		},
 		actions: {
@@ -57,10 +57,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				.then(data => setStore({informacionVehiculo:data.result} ))
 				.catch(err => console.error(err))
 				},
-			addFav = () => {
-					setListaFavoritos(listaFavoritos.concat(favorito));
-				}
-//ME HE QUEDADO AQUÍ VIENDO COMO ESCRIBIRÍA ESTA FUNCIÓN
+			addFav: () => {
+				favorito = store.informacionPersonaje.properties?.name
+					setStore(listaFavoritos.concat(favorito));
+				},
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();

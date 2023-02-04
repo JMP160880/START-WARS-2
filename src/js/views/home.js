@@ -7,16 +7,7 @@ import {Context} from "../store/appContext.js"
 
 export const Home = () => {
 
-//const{setState}=(useContext(Context)); 
-//console.log(useContext(Context));
-
-
 const{store}= useContext(Context)
-
-
-
-
-
 
 return(
 	<div className="row text-center">

@@ -1,14 +1,19 @@
 import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
+import {Context} from "../store/appContext.js"
 
 
 export const Single = props => {
+  const{store,actions}= useContext(Context)
 	
 	const params = useParams();
+  useEffect(()=>{
+    actions.obtenerPersonajesIndividuales(params.theid);
+  },[])
 	
-	const [informacionPersonaje,setInformacionPersonaje] = useState([])
-
+ 
+console.log(store.informacionPersonaje.properties?.name);
 
 	
 
@@ -21,7 +26,7 @@ export const Single = props => {
     </div>
     <div className="col-md-7">
       <div className="card-body">
-        <h1 className="card-title fw-bold text-decoration-underline lh-base text-center">{informacionPersonaje.properties?.name}</h1>
+        <h1 className="card-title fw-bold text-decoration-underline lh-base text-center">{store.informacionPersonaje.properties?.name}</h1>
         <p className="card-text text-justify">This is a wider card with supporting text below as a natural lead-in to additional content.This is a wider card with supporting text below as a natural lead-in to additional content.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
     </div>
@@ -41,12 +46,12 @@ export const Single = props => {
       <tbody className="table-warning text-danger">
         <tr>
           <th scope="row"></th>
-          <td>{informacionPersonaje.properties?.name}</td>
-          <td>{informacionPersonaje.properties?.birth_year}</td>
-          <td>{informacionPersonaje.properties?.hair_color}</td>
-	        <td>{informacionPersonaje.properties?.eye_color}</td>
-	        <td>{informacionPersonaje.properties?.height}</td>
-	        <td>{informacionPersonaje.properties?.mass}</td>
+          <td>{store.informacionPersonaje.properties?.name}</td>
+          <td>{store.informacionPersonaje.properties?.birth_year}</td>
+          <td>{store.informacionPersonaje.properties?.hair_color}</td>
+	        <td>{store.informacionPersonaje.properties?.eye_color}</td>
+	        <td>{store.informacionPersonaje.properties?.height}</td>
+	        <td>{store.informacionPersonaje.properties?.mass}</td>
         </tr>
       </tbody>
     </table>

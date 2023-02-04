@@ -5,16 +5,15 @@ import { Context } from "../store/appContext";
 
 export const Vehiculo = props => {
 	const { store, actions } = useContext(Context);
-	const params = useParams();
 	
 	const [informacionVehiculo,setInformacionVehiculo] = useState([])
+  const params = useParams();
 
+  useEffect(()=>{
+    actions.obtenerVehiculo(params.theid);
+  },[])
 	
-	
-	
-
-
-
+ 
 
 	return (
 		<div className="card mb-3 w-200 border-warning border border-3">
@@ -24,7 +23,7 @@ export const Vehiculo = props => {
     </div>
     <div className="col-md-7">
       <div className="card-body">
-        <h1 className="card-title fw-bold text-decoration-underline lh-base text-center">{informacionVehiculo.properties?.name}</h1>
+        <h1 className="card-title fw-bold text-decoration-underline lh-base text-center">{store.informacionVehiculo.properties?.name}</h1>
         <p className="card-text text-justify">This is a wider card with supporting text below as a natural lead-in to additional content.This is a wider card with supporting text below as a natural lead-in to additional content.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
     </div>
@@ -44,12 +43,12 @@ export const Vehiculo = props => {
       <tbody className="table-warning text-danger">
         <tr>
           <th scope="row"></th>
-          <td>{informacionVehiculo.properties?.name}</td>
-          <td>{informacionVehiculo.properties?.model}</td>
-          <td>{informacionVehiculo.properties?.length}</td>
-	        <td>{informacionVehiculo.properties?.crew}</td>
-	        <td>{informacionVehiculo.properties?.cost_in_credits}</td>
-	        <td>{informacionVehiculo.properties?.cargo_capacity}</td>
+          <td>{store.informacionVehiculo.properties?.name}</td>
+          <td>{store.informacionVehiculo.properties?.model}</td>
+          <td>{store.informacionVehiculo.properties?.length}</td>
+	        <td>{store.informacionVehiculo.properties?.crew}</td>
+	        <td>{store.informacionVehiculo.properties?.cost_in_credits}</td>
+	        <td>{store.informacionVehiculo.properties?.cargo_capacity}</td>
         </tr>
       </tbody>
     </table>

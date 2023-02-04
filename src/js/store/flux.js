@@ -4,7 +4,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			personajes: [],
 			planetas: [],
 			vehiculos: [],
-			informacionPersonaje: [],
+			informacionPersonaje: {},
 			informacionPlaneta: [],
 			informacionVehiculo: [],
 			
@@ -17,7 +17,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					method: "GET"
 				})
 				.then(res => res.json())
-				.then(data => setPersonajes(data.results))
+				.then(data => setStore({personajes:data.results} ))
 				.catch(err => console.error(err))
 				},
 			
@@ -26,7 +26,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					method: "GET"
 				})
 				.then(res => res.json())
-				.then(data => setPlanetas(data.results))
+				.then(data => setStore({planetas:data.results} ))
 				.catch(err => console.error(err))
 				},
 			
@@ -35,25 +35,25 @@ const getState = ({ getStore, getActions, setStore }) => {
 					method: "GET"
 				})
 				.then(res => res.json())
-				.then(data => setVehiculos(data.results))
+				.then(data => setStore({vehiculos:data.results} ))
 				.catch(err => console.error(err))
 				},
-			obtenerPersonajesIndividuales: () => {
-				fetch("https://www.swapi.tech/api/people/" + params.theid)
+			obtenerPersonajesIndividuales: (id) => {
+				fetch("https://www.swapi.tech/api/people/" + id)
 				.then(res => res.json())
-				.then(data => setInformacionPersonaje(data.result))
+				.then(data => setStore({informacionPersonaje:data.result} ))
 				.catch(err => console.error(err))
 				},
-			obtenerPlaneta: () => {
-				fetch("https://www.swapi.tech/api/planets/" + params.theid)
+			obtenerPlaneta: (id) => {
+				fetch("https://www.swapi.tech/api/planets/" + id)
 				.then(res => res.json())
-				.then(data => setInformacionPlaneta(data.result))
+				.then(data => setStore({informacionPlaneta:data.result} ))
 				.catch(err => console.error(err))
 				},
-			obtenerVehiculo: () => {
-				fetch("https://www.swapi.tech/api/vehicles/" + params.theid)
+			obtenerVehiculo: (id) => {
+				fetch("https://www.swapi.tech/api/vehicles/" + id)
 				.then(res => res.json())
-				.then(data => setInformacionVehiculo(data.result))
+				.then(data => setStore({informacionVehiculo:data.result} ))
 				.catch(err => console.error(err))
 				},
 

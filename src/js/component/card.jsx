@@ -7,20 +7,10 @@ import {Context} from "../store/appContext.js"
 const Card = (props) =>{
     const{store,actions}= useContext(Context)
 	const params = useParams();
-    const [favorito,setFavorito] = useState({});
-    const [listaFavoritos,setListaFavoritos] = useState([]);
+    // const [favorito,setFavorito] = useState({});
+    // const [listaFavoritos,setListaFavoritos] = useState([]);
 
-    const addFav = (e) =>{
-        if(console.log(props.nombre)){
-            setListaFavoritos(listaFavoritos.concat(favoritos))
-        }
-    }
-    const deleteFav = (id) =>{
-        let borrar = listaFavoritos[id]
-        setListaFavoritos(listaFavoritos.filter((item) => item!=borrar))
-    }
-
-   
+   //AQUÍ IRÍAN LAS FUNCIONES addFav y deleteFav
     return(
     
         <div className="card d-flex content-justify m-2 border-warning border border-3">
@@ -32,19 +22,11 @@ const Card = (props) =>{
                     <Link to={"/single/"+ props.id} className="card-link">
                         <button type="button" className="btn btn-outline-primary border-primary border border-2 fw-bold">Learn more!</button>
                     </Link>
-                    <ul>
                     <Link className="card-link">
-                        <button onChange={(e)=>setFavorito(e.target.value)} value={favorito}
-                         onClick={addFav}
+                        <button onChange={(e)=>setFavorito(e.target.value)} value={store.favorito}
+                         onClick={actions.addFav}
                         type="button" className="btn btn-outline-warning"><i className="fa fa-heart"></i></button>
                     </Link>
-                    {listaFavoritos.map((item,id) => (
-					<li  key={id}>
-						{item} <button onClick={()=>deleteFav(id)}>
-						<i className="fa fa-trash"></i></button>
-					</li>
-				))}
-                    </ul>
                 </div>
                
             </div>

@@ -5,10 +5,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 			planetas: [],
 			vehiculos: [],
 			informacionPersonaje: {},
-			informacionPlaneta: [],
-			informacionVehiculo: [],
-			favorito: (""),
-			listaFavoritos: [],
+			informacionPlaneta: {},
+			informacionVehiculo: {},
+			// favorito: (""),
+			// listaFavoritos: [],
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -57,10 +57,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				.then(data => setStore({informacionVehiculo:data.result} ))
 				.catch(err => console.error(err))
 				},
-			addFav: () => {
-				favorito = store.informacionPersonaje.properties?.name
-					setStore(listaFavoritos.concat(favorito));
-				},
+			// addFav: () => {
+			// 	favorito = store.informacionPersonaje.properties?.name
+			// 		setStore(listaFavoritos.concat(favorito));
+			// 	},
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();

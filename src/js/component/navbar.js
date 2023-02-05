@@ -19,13 +19,13 @@ export const Navbar = () => {
   					<button className="btn btn-dark text-bold fs-1 btn-lg dropdown-toggle border-warning border border-3" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
     				Favoritos
   					</button>
-  					<ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+  					{/* <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 						{store.listaFavoritos.map((item,id) =>(
 							<li  key={id} className="dropdown-item">
 								{item}{actions.addFav()}
 							</li>
 						) )}
-  					</ul>
+  					</ul> */}
 				</div>
 			</div>
 		</nav>

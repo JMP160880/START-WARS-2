@@ -23,8 +23,7 @@ const Card = (props) =>{
                         <button type="button" className="btn btn-outline-primary border-primary border border-2 fw-bold">Learn more!</button>
                     </Link>
                     <Link className="card-link">
-                        <button onChange={(e)=>setFavorito(e.target.value)} value={store.favorito}
-                         onClick={actions.addFav}
+                        <button onClick={() => actions.addFav(props.nombre)}
                         type="button" className="btn btn-outline-warning"><i className="fa fa-heart"></i></button>
                     </Link>
                 </div>

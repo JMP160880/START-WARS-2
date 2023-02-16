@@ -57,14 +57,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 				.then(data => setStore({informacionVehiculo:data.result} ))
 				.catch(err => console.error(err))
 				},
-			addFav: (e) =>{
-				if(console.log(props.nombre)){
-				setListaFavoritos(listaFavoritos.concat(favoritos))
-				}
+			addFav: (nombre) =>{
+				setStore({listaFavoritos:[...getStore().listaFavoritos,nombre]})
 				},
 			deleteFav: (id) =>{
-				let borrar = listaFavoritos[id]
-				setListaFavoritos(listaFavoritos.filter((item) => item!=borrar))
+				//let borrar = getStore().listaFavoritos[id]
+				setStore({listaFavoritos:getStore().listaFavoritos.filter((item,i) => i!=id)})
 				},
 			changeColor: (index, color) => {
 				//get the store
